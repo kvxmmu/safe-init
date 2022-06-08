@@ -31,11 +31,6 @@ impl<T: Debug, R> Debug for SafeUninit<T, R> {
     }
 }
 
-pub fn test() {
-    let x: safe_uninit![_, deref_mut] = SafeUninit::new(-10i32);
-    println!("-10 + x = {}", x.take_ref() + 10);
-}
-
 impl<T, R> SafeUninit<T, R> {
     /// Check whether the value is initialized or not
     pub fn initialized(&self) -> bool {
