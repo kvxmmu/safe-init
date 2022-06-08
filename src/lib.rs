@@ -39,6 +39,7 @@ impl<T, R> SafeUninit<T, R> {
     }
 
     /// Get inner value of the container
+    /// 
     /// Panics if the value is uninitialized
     pub fn take(self) -> T {
         self.inner
@@ -46,16 +47,22 @@ impl<T, R> SafeUninit<T, R> {
     }
 
     /// Get inner value of the container
+    /// 
     /// Unlike the `SafeUninit::take` method, this method
+    /// 
     /// will not panic if the value is uninitialized
     pub fn take_option(self) -> Option<T> {
         self.inner
     }
 
     /// Get inner value of the container
+    /// 
     /// Unlike the `SafeUninit::take` method, this method
+    /// 
     /// will return reference to the value
+    /// 
     /// instead of moving out the container
+    /// 
     /// panics if the value is uninitialized
     pub fn take_ref(&self) -> &T {
         self.inner
@@ -64,9 +71,13 @@ impl<T, R> SafeUninit<T, R> {
     }
 
     /// Get inner value of the container
+    /// 
     /// Unlike the `SafeUninit::take` method, this method
+    /// 
     /// will return mutable reference to the value
+    /// 
     /// instead of moving out the container
+    /// 
     /// panics if the value is uninitialized
     pub fn take_mut(&mut self) -> &mut T {
         self.inner
@@ -75,8 +86,11 @@ impl<T, R> SafeUninit<T, R> {
     }
 
     /// Get inner value of the container
+    /// 
     /// Unlike the `SafeUninit::take` method,
+    /// 
     /// this method do not include initialization checks,
+    /// 
     /// so, accessing unitialized value is an undefined behavior
     pub unsafe fn take_unchecked(self) -> T {
         self.inner
@@ -84,8 +98,11 @@ impl<T, R> SafeUninit<T, R> {
     }
 
     /// Get inner value of the container
+    /// 
     /// Same as `SafeUninit::take_mut`, but unlike the `SafeUninit::take_mut` method,
+    /// 
     /// this method do not include initialization checks,
+    /// 
     /// so, accessing unitialized value is an undefined behavior
     pub unsafe fn take_mut_unchecked(&mut self) -> &mut T {
         self.inner
@@ -93,8 +110,11 @@ impl<T, R> SafeUninit<T, R> {
             .unwrap_unchecked()
     }
     /// Get inner value of the container
+    /// 
     /// Same as `SafeUninit::take_ref`, but unlike the `SafeUninit::take_ref` method,
+    /// 
     /// this method do not include initialization checks,
+    /// 
     /// so, accessing unitialized value is an undefined behavior
     pub unsafe fn take_ref_unchecked(&self) -> &T {
         self.inner
