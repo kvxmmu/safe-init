@@ -6,8 +6,8 @@ edition = "2021"
 license-file = "LICENSE"
 description = "Safe way to interact with the uninitialized or lately initialized data"
 readme = "README.md"
-homepage = "https://github.com/kvxmmu/safe-uninit"
-repository = "https://github.com/kvxmmu/safe-uninit"
+homepage = "https://github.com/kvxmmu/safe-init"
+repository = "https://github.com/kvxmmu/safe-init"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
