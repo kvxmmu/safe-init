@@ -1,4 +1,4 @@
-use safe_uninit::*;
+use safe_init::*;
 
 fn main() {
     let mut x: safe_uninit![_] = SafeUninit::new(-10i32);
