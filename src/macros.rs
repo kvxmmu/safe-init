@@ -1,7 +1,11 @@
 /// Easy way to access to the SafeUninit type
+/// 
 /// safe_uninit![T] = safe_uninit![T, deref_mut]
+/// 
 /// safe_uninit![T, deref] - implement only Deref trait, no DerefMut
+/// 
 /// safe_uninit![T, deref_mut] - implement Deref + DerefMut traits
+/// 
 /// This makes SafeUninit struct transparent to its underlying value
 #[macro_export]
 macro_rules! safe_uninit {
