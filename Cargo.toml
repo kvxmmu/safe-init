@@ -1,7 +1,13 @@
 [package]
 name = "safe-uninit"
-version = "0.1.0"
+version = "1.0.1"
 edition = "2021"
+
+license-file = "LICENSE"
+description = "Safe way to interact with the uninitialized or lately initialized data"
+readme = "README.md"
+homepage = "https://github.com/kvxmmu/safe-uninit"
+repository = "https://github.com/kvxmmu/safe-uninit"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
