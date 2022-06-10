@@ -10,7 +10,7 @@
 #[macro_export]
 macro_rules! SafeUninit {
     ($ty:ty) => {
-        $crate::safe_uninit![$ty, deref_mut]
+        $crate::SafeUninit![$ty, deref_mut]
     };
 
     ($ty:ty, no_deref) => {
