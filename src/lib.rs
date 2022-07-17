@@ -54,6 +54,13 @@ impl<T, R> SafeUninit<T, R> {
     pub fn take_option(self) -> Option<T> {
         self.inner
     }
+    
+    pub fn take_option_ref(&self) -> Option<&'_ T> {
+        self.inner.as_ref()
+    
+    pub fn take_option_ref_mut(&mut self) -> Option<&'_ mut T> {
+        self.inner.as_mut()
+    }
 
     /// Get inner value of the container
     /// 
